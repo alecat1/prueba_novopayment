@@ -53,7 +53,7 @@ const Navbar = (props) => {
               <div className='header-nav-div'>
                 <span>{element.name}</span>
               </div>
-              {/* uso de la librería framer-motion para animaciones de las listas al momento de desplegar información */}
+              {/* uso de la librería framer-motion para animaciones de las listas al momento de desplegar información de archivo .json */}
               <motion.ul
                 variants={menu_animation_styles}
                 animate={showSubMenu[element.name] ? "open" : "closed"}
