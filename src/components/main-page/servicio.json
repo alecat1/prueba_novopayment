@@ -1,0 +1,36 @@
+{
+  "lista": [
+    {
+      "name": "card_list"
+    },
+    {
+      "name": "pays_transfer",
+      "children": [
+        {
+          "name": "between_cards"
+        },
+        {
+          "name": "banks"
+        },
+        {
+          "name": "credit_card"
+        }
+      ]
+    },
+    {
+      "name": "support",
+      "children": [
+        {
+          "name": "lock"
+        },
+        {
+          "name": "change_pass"
+        }
+      ]
+    },
+    {
+      "name": "enterprises"
+    }
+  ]
+  }
+  
