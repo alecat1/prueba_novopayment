@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+Pasos para instalación y ejecución del proyecto:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para el desarrollo de este proyecto se utilizaron
+las siguientes dependencias en sus respectivas versiones,
+se recomienda contar con ellas para su correcto funcionamiento:
 
-## Available Scripts
+1. npm versión 8.15.0
+2. npm react version 18.2.0
+3. control de versiones git, uso de comandos git
 
-In the project directory, you can run:
+Ejecución:
 
-### `npm start`
+1. Clonar este repositorio: git clone https://github.com/alecat1/prueba_novopayment.git
+2. La rama master se encuentra actualizada con el último desarrollo de la rama de "develop".
+3. Verificar con el comando "git status" que se encuentre en la rama master para visualizar los últimos cambios.
+4. Instalar dependencias con el comando "npm i"
+5. Ejecutar el proyecto con el comando "npm start"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+¿Qué se hizo?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Se creó un componente "Header", haciendo uso del componente "Box" que nos ofrece la librería Material UI,
+ya que este cumple la función de un <div> pero este tiene la capacidad de envolver un componente mediante propiedades.
+2. Se creó un componente "Footer" siguiendo la misma estructura que en el componente "Header".
+3. Se creó un componente "Navbar" el cual contiene la barra de menú ubicada en la parte superior.
+Para ello se utilizó el componente "Toolbar" de Material UI, el cual nos proporciona el menú, además
+se hace uso de la librería Framer Motion para proporcionar la ilusión de despliegue de las opciones del menú.
+la ventaja de utilizar esta librería es que puedes hacer uso de diferentes animaciones, a través de propiedades
+sencillas.
+Para la lectura del archivo .json se utiliza la función .map la cual se encargaba de ir leyendo la key de cada elemento
+traer el "name" o título y verificar si dicho elemento contenía "hijos" o sub menús. Si el elemento tenía un sub menú
+se recorría nuevamente con la función .map y se extraía en "name" o título del elemento, a medida que esto ocurre
+se crea una <li> con el título del elemento y se agregaba a una <ul> principal. Finalmente, se añaden dos funciones
+para detectar cuando el mouse pasa por encima de una opción del menú y así desplegarla, lo mismo para cerrarla.
+Para terminar, se crea un componente llamado "MainPage" dónde se hace el llamado a los 3 componentes anteriores,
+y se lee el archivo .json, el cual se pasa como propiedad al componente "Navbar". Este componente principal se agrega
+al componente padre "App".
